@@ -1,0 +1,38 @@
+/* NavigationBar.css */
+.navigationbar {
+    background: #34495e;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navigationbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navigationbar li {
+    margin: 0 20px;
+}
+
+.navigationbar a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navigationbar a:hover {
+    color: #f39c12;
+    transform: translateY(-3px);
+}
+
+.navigationbar li.active a {
+    color: #f39c12;
+    font-weight: bold;
+    border-bottom: 2px solid #f39c12;
+}

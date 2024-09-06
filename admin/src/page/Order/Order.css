@@ -1,0 +1,230 @@
+.order {
+    width: 100%;
+    padding: 20px;
+    background-color: #f0f2f5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.order h3 {
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.order-search {
+    width: 80%;
+    padding: 12px 18px;
+    margin: 20px auto;
+    border-radius: 25px;
+    border: 2px solid #ddd;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #ffffff, #f9f9f9);
+    transition: all 0.3s ease-in-out;
+}
+
+.order-search:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+.order-search::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.order-status-filter {
+    width: 220px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 2px solid #ddd;
+    font-size: 16px;
+    background: linear-gradient(to right, #ffffff, #e9ecef);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.order-status-filter:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.5);
+}
+
+.order-status-filter option {
+    background: #ffffff;
+    color: #333;
+    padding: 10px;
+}
+
+.order-item {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    border: 2px solid #444;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.order-item-imgage img {
+    width: 100px;
+    border-radius: 10px;
+}
+
+.orderitem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #444;
+}
+
+.order-item-userid p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.order-item-userid p:first-child {
+    font-size: 20px;
+    font-weight: 700;
+    color: #d9534f;
+}
+
+.orderitem-detail {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.orderitem-detail p {
+    font-size: 18px;
+    color: #555;
+}
+
+.orderitem-detail p:first-child {
+    font-weight: 700;
+}
+
+.orderitem-amount {
+    font-size: 20px;
+    color: #e74c3c;
+    font-weight: 800;
+}
+
+.order-item select {
+    width: 160px;
+    padding: 8px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    border: 2px solid #444;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.order-item select:hover {
+    background-color: #eaeaea;
+}
+
+.order-item select:focus {
+    border-color: #1abc9c;
+}
+
+.order-filters {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto 30px;
+    align-items: center;
+}
+
+.order-status-filter {
+    width: 200px;
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid #444;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.order-status-filter:hover {
+    background-color: #f1f1f1;
+}
+
+.order-status-filter:focus {
+    border-color: #3498db;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .order-item {
+        grid-template-columns: 3fr 1fr;
+        padding: 15px;
+    }
+
+    .order-item select {
+        width: 140px;
+        padding: 6px;
+    }
+
+    .orderitem-detail {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .order-item {
+        grid-template-columns: 1fr;
+        text-align: start;
+    }
+
+    .order-item-imgage img {
+        margin: 0 auto 10px;
+    }
+
+    .order-status-filter, 
+    .order-search {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .order-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 480px) {
+    .order h3 {
+        font-size: 24px;
+    }
+
+    .order-item {
+        padding: 10px;
+        margin: 10px auto;
+    }
+
+    .order-item select {
+        width: 100%;
+    }
+
+    .orderitem p {
+        font-size: 16px;
+    }
+}

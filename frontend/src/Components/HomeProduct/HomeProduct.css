@@ -1,0 +1,41 @@
+.tshirt, .babytee, .polo, .shirt, .jacket,.hoodie,.pants{
+    display: flex;
+    flex-direction: column;
+}
+
+.tshirt h3, .babytee h3, .polo h3, .shirt h3, .jacket h3, .hoodie h3, .pants h3{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+.tshirt-list, .babytee-list,.polo-list.shirt-list,.jacket-list,.hoodie-list,.pants-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 20px; /* Thêm khoảng cách giữa các phần tử trong lưới */
+}
+
+.tshirt-list span,.babytee-list span,.polo-list span,.shirt-list span,.jacket-list span,.hoodie-list span,.pants-list span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    position: relative; /* Đảm bảo nội dung bên trong được căn chỉnh chính xác */
+}
+
+.tshirt-list span p,.babytee-list span p,.polo-list span p,.shirt-list span p,.jacket-list span p,.hoodie-list span p,.pants-list span p{
+    width: 100%;
+    height: 100%;
+    color: black;
+    display: flex; /* Thêm để căn chỉnh nội dung bên trong */
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: underline;
+    border-radius: 5px;
+    cursor: pointer;
+}

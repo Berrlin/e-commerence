@@ -1,0 +1,340 @@
+/* Basic Styles */
+.navbar {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.navbar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.navbar-top-image img {
+    width: 200px;
+}
+
+.navbar-top-center ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.navbar-top-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.navbar-top-right form {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-top-right form input {
+    border-radius: 20px;
+    padding-left: 10px;
+    padding: 4px;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-top-right form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.navbar-top-right form button {
+    background-color: white;
+    margin-top: 0px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-top-right form button:hover {
+    opacity: 0.7;
+    background-color: white;
+    transform: scale(1.05);
+}
+
+.navbar-top-right img {
+    width: 25px;
+}
+
+hr {
+    width: 100%;
+    opacity: 0.4;
+}
+
+.navbar-bot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.navbar-bot ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.navbar-bot li {
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.navbar-top-center ul a,
+.navbar-bot ul a {
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+}
+
+.navbar-top-center ul a:hover,
+.navbar-bot ul a:hover {
+    opacity: 0.5;
+}
+
+.navbar-top-right-cart {
+    position: relative;
+}
+
+.navbar-top-right-cart .cart-quantity {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff5733;
+    color: white;
+    border-radius: 50%;
+    padding: 1px 2px;
+    font-size: 15px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+.navbar-profile {
+    position: relative;
+}
+
+.navbar-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+    background-color: lightblue;
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid tomato;
+    outline: 2px solid white;
+    list-style: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.navbar-profile:hover .navbar-profile-dropdown {
+    display: flex;
+}
+
+.navbar-profile-dropdown li {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navbar-profile-dropdown p {
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+.navbar-profile-dropdown img {
+    width: 20px;
+}
+
+.navbar-profile-dropdown p:hover {
+    color: tomato;
+}
+
+.navbar-menu-icon {
+    display: none;
+    width: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar-menu-icon.active {
+    transform: rotate(90deg);
+}
+
+@media (max-width: 1024px) {
+    .navbar-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-top-center ul {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        font-size: 18px;
+    }
+
+    .navbar-top-right {
+        margin-top: 10px;
+    }
+
+    .navbar-top-image img {
+        width: 150px;
+    }
+
+    .navbar-profile-dropdown {
+        width: auto;
+    }
+    .navbar-bot ul{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-menu-icon {
+        display: block;
+        position: fixed; 
+        top: 20px; 
+        right: 20px; 
+        z-index: 2000;
+    }
+
+    .navbar-top-center {
+        display: none; 
+    }
+
+    .navbar-bot {
+        display: none; 
+        position: fixed;
+        top: 60px; 
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        z-index: 1000; 
+        overflow-y: auto; 
+        max-height: calc(100vh - 60px); 
+    }
+
+    .navbar-bot.active {
+        display: block; 
+    }
+
+    .navbar-bot ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+    }
+
+    .navbar-bot ul li {
+        padding: 15px;
+        border-bottom: 1px solid #ddd; 
+    }
+
+    .navbar-bot ul li:last-child {
+        border-bottom: none; 
+    }
+
+    .navbar-bot ul li a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        font-size: 16px; 
+    }
+
+    .navbar-bot ul li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .navbar-profile-dropdown {
+        right: 0;
+        top: 100%;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .navbar-top-center {
+        display: none; 
+    }
+
+    .navbar-top-image img {
+        width: 100px; 
+    }
+
+    .navbar-top-right {
+        margin-top: 10px;
+    }
+
+    .navbar-bot {
+        display: none; 
+        position: fixed;
+        top: 60px; 
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        z-index: 1000; 
+        overflow-y: auto; 
+        margin-top: -10px;
+        max-height: calc(100vh - 60px); 
+    }
+
+    .navbar-bot.active {
+        display: block; 
+    }
+
+    .navbar-bot ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+    }
+
+    .navbar-bot ul li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd; 
+    }
+
+    .navbar-bot ul li:last-child {
+        border-bottom: none; 
+    }
+
+    .navbar-bot ul li a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        font-size: 14px;
+    }
+
+    .navbar-bot ul li a:hover {
+        background-color: #f0f0f0;
+    }
+
+    .navbar-profile-dropdown {
+        right: 0;
+        top: 100%;
+        width: 100%;
+    }
+}

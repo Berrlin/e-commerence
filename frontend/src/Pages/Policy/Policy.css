@@ -1,0 +1,20 @@
+.policy{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+
+.policy h1{
+    font-weight: 300;
+    font-size: 50px;
+}
+
+h4{
+    font-size: 20px;
+}
+
+p{
+    font-size: 16px;
+}

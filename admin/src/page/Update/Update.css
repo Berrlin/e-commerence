@@ -1,0 +1,102 @@
+/* Update.css */
+.update-product {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update-product h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.update-product form {
+    display: flex;
+    flex-direction: column;
+}
+
+.update-product div {
+    margin-bottom: 15px;
+}
+
+.update-product label {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.update-product input[type="text"],
+.update-product input[type="number"],
+.update-product select,
+.update-product input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.update-product input[type="file"] {
+    padding: 0;
+    border: none;
+}
+
+.update-product button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.update-product button:hover {
+    background-color: #0056b3;
+}
+
+.update-product img {
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-width: 150px;
+    height: auto;
+}
+
+
+
+.update-product input[type="number"]::-webkit-inner-spin-button,
+.update-product input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.update-product select {
+    padding: 10px;
+}
+
+.update-product .color-section {
+    margin-top: 15px;
+}
+
+.update-product .color-section div {
+    margin-bottom: 10px;
+}
+
+.update-product .color-section input[type="text"] {
+    width: calc(100% - 120px);
+    display: inline-block;
+}
+
+.update-product .color-section input[type="number"] {
+    width: 100px;
+    display: inline-block;
+    margin-left: 10px;
+}

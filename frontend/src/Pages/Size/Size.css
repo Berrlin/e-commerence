@@ -1,0 +1,13 @@
+.size{
+    margin-top: 50px;
+}
+
+.size p{
+    font-size: 40px;
+    font-weight: 100;
+    margin-bottom: 40px;
+}
+
+.size img{
+    width: 100%;
+}

@@ -1,0 +1,136 @@
+/* Các định dạng cơ bản */
+.my-orders {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.my-orders h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: start;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.my-orders-order {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.my-orders-order p:first-child {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.my-orders-order p {
+    text-align: start;
+    margin: 5px 0;
+    font-size: 18px;
+    color: #666;
+}
+
+.order-items {
+    margin-top: 20px;
+}
+
+.order-item {
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+/* Định dạng cho ảnh của mặt hàng */
+.order-item-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Định dạng cho thông tin của mặt hàng */
+.order-item-info {
+    flex: 1;
+    margin-top: -5px;
+}
+
+.order-item-info p:last-child {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item span {
+    font-size: 20px;
+    border: 2px solid wheat;
+    padding: 10px;
+    border-radius: 20px;
+    color: #e74c3c;
+    background-color: lightgreen;
+    cursor: pointer;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .my-orders h2 {
+        font-size: 20px;
+    }
+
+    .order-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .order-item-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item span {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .my-orders h2 {
+        font-size: 18px;
+    }
+
+    .my-orders-order p {
+        font-size: 16px;
+    }
+
+    .order-item-info p:last-child {
+        font-size: 18px;
+    }
+
+    .item span {
+        font-size: 16px;
+        padding: 8px;
+    }
+}

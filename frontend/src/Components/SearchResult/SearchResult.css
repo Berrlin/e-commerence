@@ -1,0 +1,46 @@
+.search-page {
+    max-width: 1200px;
+    margin: 40px auto;
+
+}
+
+.search-page h2 {
+    text-align: start;
+    font-size: 40px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.notfound p {
+    font-size: 20px;
+    color: #ff5733;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out; 
+    margin-top: 20px;
+  }
+  
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px); 
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); 
+    }
+  }
+
+@media (max-width: 768px) {
+    .search-results {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+}

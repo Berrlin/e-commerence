@@ -1,0 +1,204 @@
+.list-container {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+.product-item {
+    flex: 1 1 250px;
+    /* Mỗi sản phẩm có chiều rộng tối thiểu 250px */
+    max-width: 100%;
+    /* Chiều rộng tối đa là 100% để đảm bảo sản phẩm không bị quá lớn */
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 100%;
+    /* Hình ảnh chiếm tối đa chiều rộng của container sản phẩm */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+}
+
+.product-item img:hover {
+    transform: scale(1.05);
+    /* Hiệu ứng phóng to khi hover */
+}
+
+.product-item h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.product-item h2:hover {
+    color: #007bff;
+    /* Đổi màu chữ khi hover */
+}
+
+.product-item p {
+    font-size: 16px;
+    color: #555;
+    margin: 6px 0;
+    transition: color 0.3s ease;
+}
+
+.product-item p:hover {
+    color: #007bff;
+}
+
+.color-block {
+    margin-top: 16px;
+    padding: 12px;
+    background-color: #f0f8ff;
+    /* Màu nền nhạt */
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.color-block:hover {
+    background-color: #e6f7ff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.color-block p {
+    margin: 6px 0;
+}
+
+.button-group {
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    /* Căn giữa các nút */
+}
+
+.button-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+    transform: scale(1.05);
+}
+
+/* Styles for the search bar */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.search-bar input {
+    width: 100%;
+    max-width: 600px;
+    /* Giới hạn độ rộng của thanh tìm kiếm */
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+    outline: none;
+    /* Xóa bỏ viền mặc định khi focus */
+}
+
+.search-bar input::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.category-dropdown {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-left: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    /* Set a fixed width or adjust as needed */
+}
+
+.category-dropdown:hover,
+.category-dropdown:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(38, 143, 255, 0.2);
+    outline: none;
+    /* Remove default focus outline */
+}
+
+.category-dropdown option {
+    padding: 10px;
+}
+
+
+
+/* Điều chỉnh hiển thị responsive */
+@media (max-width: 768px) {
+    .product-item {
+        flex: 1 1 100%;
+        /* Trên màn hình nhỏ, mỗi hàng có thể chứa 1 sản phẩm */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-item {
+        padding: 15px;
+    }
+
+    .product-item h2 {
+        font-size: 22px;
+    }
+
+    .product-item p {
+        font-size: 14px;
+    }
+
+    .button-group button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
