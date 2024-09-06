@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
     phone: { type: Number, required: true },
     password: { type: String, required: true },
     cartData: { 
-        type: Map, // Consider using Map if cartData is more dynamic
+        type: Map,
         of: new mongoose.Schema({
             quantity: { type: Number, required: true },
             color: { type: String, required: true },

@@ -211,8 +211,9 @@ hr {
 
 @media (max-width: 768px) {
     .navbar-menu-icon {
+        
         display: block;
-        position: fixed; 
+        position: absolute;
         top: 20px; 
         right: 20px; 
         z-index: 2000;
