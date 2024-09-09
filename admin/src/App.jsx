@@ -10,7 +10,7 @@ import Update from './page/Update/Update';
 import Order from './page/Order/Order';
 import User from './page/User/User';
 const App = () => {
-  const url = "http://localhost:4000"
+  const url = "https://e-commerence-backend.onrender.com"
 
   return (
     <div className="app">
