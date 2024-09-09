@@ -45,10 +45,6 @@ const addToCart = async (req, res) => {
 const decreaseqtyCart = async (req, res) => {
     try {
         const { userId, itemId, color, size } = req.body;
-        console.log('Decrease quantity - userId:', userId);
-        console.log('Decrease quantity - itemId:', itemId);
-        console.log('Decrease quantity - color:', color);
-        console.log('Decrease quantity - size:', size);
 
         // Tìm người dùng
         let userData = await userModel.findById(userId);

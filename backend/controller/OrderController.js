@@ -19,16 +19,23 @@ const placeOrder = async (req, res) => {
         // Xóa dữ liệu giỏ hàng của người dùng
         await userModel.findByIdAndUpdate(req.body.userId, { cartData: {} });
 
-        const line_items = req.body.items.map((item) => ({
-            price_data: {
-                currency: "vnd",
-                product_data: {
-                    name: item.name
+        const updatingList = [];
+        const line_items = req.body.items.map((item) => {
+            updatingList.push({productId: "abc", soldQuatity: 10})
+            return {
+                price_data: {
+                    currency: "vnd",
+                    product_data: {
+                        name: item.name
+                    },
+                    unit_amount: item.price * 100 * 10
                 },
-                unit_amount: item.price * 100 * 10
-            },
-            quantity: item.quantity
-        }));
+                quantity: item.quantity
+            };
+        });
+
+        // Update product's quatity after made an order
+        await 
 
         line_items.push({
             price_data: {
